@@ -1,0 +1,775 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Kannada:wght@100..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+Kannada:wght@100..900&family=Noto+Serif+Kannada:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* =========================================================
+   THEME VARIABLES
+   ========================================================= */
+
+/* Light theme (default) */
+:root {
+    --bg-body:      #f5f5f5;
+    --bg-header:    #ffffff;
+    --bg-topbar:    #333333;
+    --bg-navbar:    #2c3e50;
+    --bg-card:      #ffffff;
+    --bg-hero:      #ffffff;
+    --bg-footer:    #2c3e50;
+    --bg-page-title:#f3f3f3;
+    --bg-home-slider:#f7f7f7;
+
+    --text-main:    #555555;
+    --text-heading: #222222;
+    --text-muted:   #777777;
+    --text-topbar:  #ffffff;
+    --text-navbar:  #ffffff;
+    --text-footer:  #ffffff;
+
+    --link-color:   #333333;
+    --link-hover:   #C68754;
+
+    --accent:       #C68754;
+    --border-soft:  #eeeeee;
+    --border-hero:  #e5e5e5;
+}
+
+/* Dark theme overrides */
+html[data-theme="dark"] {
+    --bg-body:      #121212;
+    --bg-header:    #181818;
+    --bg-topbar:    #111111;
+    --bg-navbar:    #000000;
+    --bg-card:      #1f1f1f;
+    --bg-hero:      #181818;
+    --bg-footer:    #000000;
+    --bg-page-title:#202020;
+    --bg-home-slider:#181818;
+
+    --text-main:    #e0e0e0;
+    --text-heading: #ffffff;
+    --text-muted:   #aaaaaa;
+    --text-topbar:  #e0e0e0;
+    --text-navbar:  #f5f5f5;
+    --text-footer:  #e0e0e0;
+
+    --link-color:   #f5f5f5;
+    --link-hover:   #C68754;
+
+    --accent:       #C68754;
+    --border-soft:  #333333;
+    --border-hero:  #333333;
+}
+
+/* =========================================================
+   TYPOGRAPHY & BASE
+   ========================================================= */
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color: var(--text-heading);
+}
+
+/* Links */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--link-hover);
+}
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.top-bar {
+    background: var(--bg-topbar);
+    color: var(--text-topbar);
+    font-size: 13px;
+    padding: 8px 0;
+}
+.top-bar a {
+    color: var(--text-topbar);
+    margin-left: 15px;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+    background: var(--bg-header);
+    border-bottom: 1px solid var(--border-soft);
+}
+.header .logo h1 {
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+.header .logo span {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #7f8c8d;
+}
+
+/* Remove underline from logo and nav links */
+.header .logo,
+.header .logo h1,
+.header .logo span,
+.navbar .nav-link,
+.navbar .dropdown-item {
+    text-decoration: none !important;
+}
+
+/* Search form */
+.search-form .form-control {
+    border-radius: 0;
+    border: 2px solid #e0e0e0;
+}
+.search-form .btn-primary {
+    background: #2c3e50;
+    border: none;
+    border-radius: 0;
+}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+    border-top: 1px solid var(--border-soft);
+    padding-top: 0;
+    padding-bottom: 0;
+    box-shadow: 0px 0px 5px var(--accent);
+    background: var(--bg-navbar) !important;
+}
+
+.navbar .nav-link {
+    color: var(--text-navbar) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    padding: 10px 18px !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--accent) !important;
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    margin-top: 0;
+    border-radius: 0;
+    border: 1px solid var(--border-soft);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background: var(--bg-card);
+}
+.dropdown-item {
+    font-size: 13px;
+    text-transform: capitalize;
+    color: var(--text-main);
+}
+.dropdown-item:hover {
+    background: #f8f9fa;
+    color: var(--accent);
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hurst-hero {
+    background: var(--bg-hero);
+}
+
+.hurst-hero .hero-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    color: var(--accent);
+}
+
+.hurst-hero h2 {
+    font-size: 42px;
+    margin: 15px 0 20px;
+}
+
+.hurst-hero p {
+    max-width: 420px;
+    color: var(--text-muted);
+}
+
+.hurst-hero .hero-image {
+    max-height: 350px;
+    object-fit: contain;
+}
+
+/* =========================================================
+   CATEGORY CARDS
+   ========================================================= */
+
+.category-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    box-shadow: 2px 2px 5px var(--border-soft);
+    border: 1px solid var(--border-soft);
+    background: var(--bg-card);
+    transition: transform 0.3s;
+}
+.category-card:hover {
+    transform: translateY(-5px);
+}
+.category-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+.category-card:hover img {
+    transform: scale(1.03);
+}
+.category-overlay {
+    background: var(--bg-card);
+    color: var(--text-main);
+    position: static;
+    padding: 15px;
+}
+.category-overlay h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.category-overlay p {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* =========================================================
+   PRODUCT CARDS (LISTING / HOME)
+   ========================================================= */
+
+.product-card {
+    border-radius: 0;
+    border: 1px solid var(--border-soft);
+    box-shadow: none;
+    text-align: center;
+    padding-bottom: 10px;
+    background: var(--bg-card);
+    transition: all 0.3s;
+}
+.product-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transform: translateY(-5px);
+}
+.product-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+}
+.product-info {
+    padding: 15px 10px 5px;
+}
+.product-info h3 {
+    font-size: 15px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    color: var(--text-heading);
+}
+.product-info .price {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--accent);
+}
+.product-info .original-price {
+    font-size: 13px;
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 10px;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn-primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    padding: 10px 25px;
+}
+.btn-primary:hover {
+    background: #333;
+    border-color: #333;
+}
+.btn-outline-primary {
+    border: 2px solid #2c3e50;
+    color: #2c3e50;
+    border-radius: 0;
+}
+
+/* =========================================================
+   PROMO STRIP
+   ========================================================= */
+
+.hurst-promo-strip {
+    background: var(--bg-card);
+    border-top: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+    padding: 25px 0;
+}
+.hurst-promo-strip i {
+    color: var(--accent);
+}
+.hurst-promo-strip h6 {
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+.hurst-promo-strip p {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   PAGE TITLE
+   ========================================================= */
+
+.page-title-area {
+    background: var(--bg-page-title);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-hero);
+}
+.page-title-area h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.page-title-area .breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 13px;
+}
+.page-title-area .breadcrumb a {
+    color: var(--text-muted);
+}
+.page-title-area .breadcrumb .active {
+    color: var(--text-heading);
+}
+
+/* =========================================================
+   PRODUCT LISTING AREA
+   ========================================================= */
+
+.product-area {
+    padding: 20px 0 60px;
+}
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.hurst-sidebar {
+    background: var(--bg-card);
+    padding: 20px 20px 10px;
+    border: 1px solid var(--border-soft);
+}
+.sidebar-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+.hurst-category-list li {
+    margin-bottom: 8px;
+}
+.hurst-category-list a {
+    color: #666;
+    font-size: 14px;
+    display: block;
+}
+.hurst-category-list a:hover,
+.hurst-category-list a.active {
+    color: var(--accent);
+    padding-left: 5px;
+}
+
+/* =========================================================
+   PRODUCT GRID CARD (HURST-LIKE)
+   ========================================================= */
+
+.hurst-product-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    text-align: center;
+    transition: all 0.3s ease;
+    padding:10px;
+}
+.hurst-product-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+.hurst-product-img img {
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+}
+.hurst-product-info {
+    padding: 15px 10px 18px;
+}
+.hurst-product-info .product-category {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #999;
+}
+.hurst-product-info h3 {
+    font-size: 15px;
+    margin: 8px 0 5px;
+}
+.hurst-product-info h3 a {
+    color: var(--text-heading);
+}
+.hurst-product-info h3 a:hover {
+    color: var(--accent);
+}
+.product-price {
+    margin-top: 5px;
+}
+.product-price .current {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--accent);
+}
+.product-price .old {
+    font-size: 13px;
+    text-decoration: line-through;
+    color: #aaa;
+    margin-left: 6px;
+}
+
+/* =========================================================
+   PRODUCT DETAILS PAGE
+   ========================================================= */
+
+.product-details-area {
+    padding: 40px 0 60px;
+}
+
+/* Product image wrapper */
+.pd-img-wrapper {
+    /* background: rgb(245,245,247); */
+    border: 1px solid var(--border-soft);
+    padding: 15px;
+    text-align: center;
+}
+.pd-img-wrapper img,
+.pd-img-wrapper .carousel-inner img {
+    max-height: 420px;
+    object-fit: contain;
+}
+
+/* Thumbnails */
+.product-thumbnails .thumb-item {
+    width: 70px;
+    height: 70px;
+}
+.product-thumbnails img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+}
+.product-thumbnails img.active {
+    border: 2px solid var(--accent);
+    opacity: 0.9;
+}
+.product-thumbnails img:hover {
+    opacity: 0.8;
+}
+
+/* Product text content */
+.pd-content {
+    padding-left: 10px;
+}
+.pd-title {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+.pd-category {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #999;
+}
+.pd-category a {
+    color: #666;
+}
+.pd-category a:hover {
+    color: var(--accent);
+}
+
+/* Price box */
+.pd-price-box {
+    margin: 15px 0;
+}
+.pd-current-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent);
+}
+.pd-old-price {
+    font-size: 16px;
+    text-decoration: line-through;
+    color: #aaa;
+    margin-right: 10px;
+}
+
+/* Short description */
+.pd-short-desc {
+    font-size: 14px;
+    color: #666;
+    max-width: 480px;
+}
+
+/* Meta info */
+.pd-meta p {
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+/* Tabs styling */
+.hurst-pd-tabs {
+    border-bottom: 1px solid var(--border-soft);
+    margin-bottom: 15px;
+}
+.hurst-pd-tabs .nav-link {
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #666;
+}
+.hurst-pd-tabs .nav-link.active {
+    color: #333;
+    border-color: var(--border-soft) var(--border-soft) var(--bg-card);
+}
+.hurst-pd-tab-content {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-top: none;
+    padding: 20px;
+}
+.specs-table th {
+    width: 30%;
+    background: #f9f9f9;
+}
+.specs-table td {
+    width: 70%;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    background: var(--bg-footer);
+    color: var(--text-footer);
+    padding: 50px 0 20px;
+}
+.footer h5 {
+    margin-bottom: 20px;
+    color: #e67e22;
+}
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+.footer-links li {
+    margin-bottom: 6px;
+}
+.footer-links a {
+    color: #ccc;
+}
+.footer-links a:hover {
+    color: #e67e22;
+}
+.social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    margin-right: 10px;
+    transition: background 0.3s;
+}
+.social-links a:hover {
+    background: #e67e22;
+}
+
+/* =========================================================
+   HOME SWIPER SLIDER
+   ========================================================= */
+
+.home-slider {
+    background: var(--bg-home-slider);
+    border-bottom: 1px solid var(--border-soft);
+}
+.home-slider .swiper {
+    padding: 8px 0 20px;
+}
+
+/* Card and image baseline alignment */
+.home-slide-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    padding: 8px 8px 12px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.home-slide-img-wrap {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+.home-slide-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    cursor: pointer; /* clickable preview */
+}
+.home-slide-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
+    margin-top: 2px;
+}
+
+/* Swiper navigation buttons – black arrows */
+.home-swiper-button {
+    color: #000 !important;
+}
+.home-swiper-button::after {
+    font-size: 18px;
+}
+.homeSliderSwiper .swiper-button-prev,
+.homeSliderSwiper .swiper-button-next {
+    background: transparent;
+}
+
+/* =========================================================
+   LOGOS & TAGLINE
+   ========================================================= */
+
+.tagline {
+    font-family: 'Lato', sans-serif;
+    color: #999;
+    letter-spacing: 0.2em;
+}
+
+.main-logo {
+    max-width: 100%;
+    height: auto;
+}
+.main-logo img {
+    height: 70px;
+    object-fit: contain;
+}
+
+.footer-logo {
+    max-width: 100%;
+    height: auto;
+}
+.footer-logo img {
+    height: 120px;
+    object-fit: contain;
+}
+
+/* =========================================================
+   RESPONSIVE TWEAKS
+   ========================================================= */
+
+@media (max-width: 768px) {
+    .header .logo h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+    .header .logo span{
+        text-align: center;
+    }
+    .hurst-hero h2 {
+        font-size: 32px;
+    }
+    .hurst-hero{
+        padding: 20px 0 30px;
+    }
+    .tagline{
+        font-size:12px;
+        text-align: center;
+    }
+    .footer h5{
+        margin-top:20px;
+    }
+    .btn-primary{
+        margin-bottom:10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-slide-img-wrap {
+        height: 140px;
+    }
+    .home-slide-title {
+        font-size: 12px;
+    }
+}
+
+#mode-btn{
+    color:#666;
+}
+
+#productGallery .carousel-control-prev-icon,
+#productGallery .carousel-control-next-icon {
+    filter: invert(1);          /* turns the default white SVG arrow to black */
+    background-color: transparent;
+}
+
+#productGallery .carousel-control-prev,
+#productGallery .carousel-control-next {
+    top: 50%;                /* center vertically */
+    transform: translateY(-50%);
+}
+
+.center-btn {
+  background-color: #2c3e50; /* Nice blue background */
+  color: #ffffff;            /* White text color */
+  text-align: center;        /* Ensures text inside the button is centered */
+  padding: 12px 24px;        /* Spacing inside the button */
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

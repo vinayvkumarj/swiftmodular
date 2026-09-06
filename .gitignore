@@ -1,0 +1,10 @@
+/includes/config.php
+
+admin/uploads/*
+!admin/uploads/.gitkeep
+admin/uploads/products/*
+!admin/uploads/products/.gitkeep
+admin/uploads/categories/*
+!admin/uploads/categories/.gitkeep
+admin/uploads/slider/*
+!admin/uploads/slider/.gitkeep
